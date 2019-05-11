@@ -1,0 +1,29 @@
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Libre+Barcode+128+Text" rel="stylesheet">
+<style>
+  #sprinkles {
+
+    font-family: 'Great Vibes', cursive;
+  }
+</style>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+    </a-assets>
+    <!-- <a-marker preset="hiro"> -->
+    <a-marker-camera type='pattern' url='./assets/age-of-ego.patt'>    </a-marker-camera>
+
+      <!-- <a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
+      <!-- <a-text id='sprinkles' color='teal' rotation='-90 0 0' position='0 0.5 0' value="Sprinkles x"></a-text> -->
+      <a-entity rotation='-90 0 0' text-geometry="value: Sprinkles; font: #optimerBoldFont"></a-entity>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
